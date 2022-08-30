@@ -1,0 +1,19 @@
+package com.fastcampus.javaoop.logic;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class BubbleSortTest {
+    @DisplayName("버블소트 - 리스트를 넣으면 정렬된 결과를 보여준다.")
+    @Test
+    void given_List_WhenExecuting_ThenReturnSortedList() {
+        BubbleSort<Integer> bubbleSort = new BubbleSort<>();
+        List<Integer> actual = bubbleSort.sort(Arrays.asList(3, 2, 4, 5, 1));
+        assertEquals(Arrays.asList(1, 2, 4, 3, 5), actual);
+    }
+}
